@@ -10,8 +10,8 @@ The combined dashboard includes:
 - Regulatory submissions and GCP controls
 - EDC queries, SDV, and lock readiness
 - Medical writing and AI assistant review
+- Literature review, citation tracking, paper summaries, and evidence tables
 
 Dashboard rule:
 - no source-project dashboards are exposed directly
 - donor dashboards are represented as dashboard modules inside this unified suite
-

@@ -10,6 +10,69 @@ export type SourceAIToolField = {
 };
 
 export const sourceAIToolFieldsByToolId: Record<string, SourceAIToolField[]> = {
+  "clinical-literature-review-copilot": [
+    {
+      "name": "research_question",
+      "label": "Research Question",
+      "type": "textarea",
+      "defaultValue": "In adult oncology patients, what evidence supports biomarker-guided therapy selection?",
+      "placeholder": "Enter the clinical or scientific question",
+      "options": [],
+      "required": true,
+      "source": "AIResearchLiteratureAgent"
+    },
+    {
+      "name": "papers_or_abstracts",
+      "label": "Papers or Abstracts",
+      "type": "textarea",
+      "defaultValue": "Paste paper titles, abstracts, PubMed excerpts, or notes from selected studies.",
+      "placeholder": "Paste paper text, abstracts, citations, or summaries",
+      "options": [],
+      "required": true,
+      "source": "AIResearchLiteratureAgent"
+    },
+    {
+      "name": "review_type",
+      "label": "Review Type",
+      "type": "select",
+      "defaultValue": "Evidence synthesis",
+      "placeholder": "Select review type",
+      "options": [
+        "Evidence synthesis",
+        "Citation review",
+        "Paper summary",
+        "Gap analysis",
+        "Evidence table"
+      ],
+      "required": true,
+      "source": "AIResearchLiteratureAgent"
+    },
+    {
+      "name": "evidence_table_columns",
+      "label": "Evidence Table Columns",
+      "type": "text",
+      "defaultValue": "Population, Intervention, Comparator, Outcomes, Methods, Limitations, Confidence",
+      "placeholder": "Columns to include in the evidence table",
+      "options": [],
+      "required": false,
+      "source": "AIResearchLiteratureAgent"
+    },
+    {
+      "name": "citation_format",
+      "label": "Citation Format",
+      "type": "select",
+      "defaultValue": "AMA",
+      "placeholder": "Select citation format",
+      "options": [
+        "AMA",
+        "APA",
+        "Vancouver",
+        "BibTeX"
+      ],
+      "required": false,
+      "source": "AIResearchLiteratureAgent"
+    }
+  ],
   "ai-native-discovery-engines-discovery-agent-y7ds2s-exact-ai": [
     {
       "name": "context",

@@ -22,6 +22,10 @@ Feature routes:
 - `/data-management`
 - `/biostatistics`
 - `/medical-writing`
+- `/literature-review`
+- `/citation-tracker`
+- `/paper-summaries`
+- `/evidence-tables`
 - `/notifications`
 - `/integrations`
 - `/features/ai-assistant`
@@ -45,4 +49,3 @@ Routing rule:
 - no donor login pages
 - no donor project routes
 - all feature links stay inside this suite
-

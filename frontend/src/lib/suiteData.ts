@@ -17,8 +17,8 @@ export const sourceSystems = [
   },
   {
     name: 'AIResearchLiteratureAgent',
-    ownership: 'Literature support, medical writing, clinical summaries, and evidence review',
-    coverage: ['Literature review', 'Medical writing', 'Evidence support', 'CSR drafts'],
+    ownership: 'Multi-paper literature review, citation graphing, paper summaries, evidence tables, and research gap analysis',
+    coverage: ['Literature review', 'Citation tracker', 'Paper summaries', 'Evidence tables'],
   },
   {
     name: 'AIDrugInteractionChecker',
@@ -50,6 +50,7 @@ export const dashboardModules = [
   'Regulatory submissions and GCP controls',
   'EDC queries, SDV, and lock readiness',
   'Medical writing and AI assistant review',
+  'Literature review, citation tracking, paper summaries, and evidence tables',
 ];
 
 export const workflowHighlights = [
@@ -58,4 +59,5 @@ export const workflowHighlights = [
   'AE/SAE intake, review, and reporting',
   'Regulatory submission and inspection-readiness workflow',
   'Data query cleanup, biostatistics review, and CSR drafting',
+  'AIResearchLiteratureAgent evidence synthesis, citation export, and evidence-table workflow',
 ];

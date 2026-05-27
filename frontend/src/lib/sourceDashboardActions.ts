@@ -10,6 +10,22 @@ export type SourceDashboardAction = {
 
 export const sourceDashboardActions: SourceDashboardAction[] = [
   {
+    "id": "literature-intelligence",
+    "label": "Literature Intelligence",
+    "description": "Open AIResearchLiteratureAgent workflows for literature reviews, citation tracking, paper summaries, and evidence tables.",
+    "href": "/literature-review",
+    "sourceProjects": [
+      "AIResearchLiteratureAgent"
+    ],
+    "examples": [
+      "AI literature review",
+      "Citation graph",
+      "Paper summarizer",
+      "Evidence table"
+    ],
+    "count": 1
+  },
+  {
     "id": "ai-assistant",
     "label": "AI Assistant",
     "description": "Run source-derived AI assistant workflows and prompts.",

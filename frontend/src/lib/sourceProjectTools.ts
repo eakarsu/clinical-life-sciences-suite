@@ -1,5 +1,21 @@
 export const sourceProjectTools = [
   {
+    "id": "clinical-literature-review-copilot",
+    "title": "Clinical Literature Review Copilot",
+    "category": "Literature Intelligence",
+    "description": "First-class AIResearchLiteratureAgent workflow for paper search, multi-paper synthesis, citation review, evidence gaps, and evidence-table output.",
+    "defaultPrompt": "Review the supplied clinical literature context. Return a professional evidence synthesis with key findings, methodology quality, limitations, citation gaps, unanswered questions, and evidence-table rows.",
+    "inputLabel": "Papers, abstracts, citations, or research question",
+    "outputLabel": "Literature intelligence report",
+    "signals": [
+      "Literature review",
+      "Citation graph",
+      "Paper summaries",
+      "Evidence tables",
+      "Research gaps"
+    ]
+  },
+  {
     "id": "ai-native-discovery-engines-source-workflow",
     "title": "AI Native Discovery Engines Source Workflow",
     "category": "Source Project Coverage",

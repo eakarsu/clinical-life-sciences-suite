@@ -265,6 +265,62 @@ const features = [
     ],
   },
   {
+    slug: 'literature-review',
+    title: 'Literature Review',
+    href: '/literature-review',
+    category: 'Literature Intelligence',
+    icon: FileText,
+    summary: 'AIResearchLiteratureAgent capability elevated into a first-class workflow for multi-paper reviews, clinical evidence summaries, and gap analysis.',
+    bullets: ['Multi-paper synthesis', 'Evidence gaps', 'Clinical summaries'],
+    metrics: [
+      { label: 'Review Sets', value: '38', note: 'Active' },
+      { label: 'Papers Queued', value: '412', note: 'Awaiting synthesis' },
+      { label: 'Evidence Gaps', value: '27', note: 'Flagged' },
+    ],
+  },
+  {
+    slug: 'citation-tracker',
+    title: 'Citation Tracker',
+    href: '/citation-tracker',
+    category: 'Literature Intelligence',
+    icon: ClipboardList,
+    summary: 'Citation graph, BibTeX/Zotero export, DOI follow-up, and source traceability for clinical literature work.',
+    bullets: ['Citation graph', 'DOI traceability', 'BibTeX/Zotero export'],
+    metrics: [
+      { label: 'Citations', value: '1.8K', note: 'Indexed' },
+      { label: 'Missing DOI', value: '43', note: 'Need cleanup' },
+      { label: 'Exports', value: '19', note: 'This week' },
+    ],
+  },
+  {
+    slug: 'paper-summaries',
+    title: 'Paper Summaries',
+    href: '/paper-summaries',
+    category: 'Literature Intelligence',
+    icon: FileText,
+    summary: 'Paper abstract, methods, key findings, limitations, quality, and clinical relevance summaries.',
+    bullets: ['Abstract summaries', 'Methodology quality', 'Clinical relevance'],
+    metrics: [
+      { label: 'Summaries', value: '286', note: 'Generated' },
+      { label: 'Quality Holds', value: '18', note: 'Need review' },
+      { label: 'Reviewer Edits', value: '64', note: 'This week' },
+    ],
+  },
+  {
+    slug: 'evidence-tables',
+    title: 'Evidence Tables',
+    href: '/evidence-tables',
+    category: 'Literature Intelligence',
+    icon: BarChart3,
+    summary: 'Structured evidence tables for populations, interventions, comparators, outcomes, methods, and confidence scoring.',
+    bullets: ['PICO extraction', 'Evidence grading', 'Exportable tables'],
+    metrics: [
+      { label: 'Evidence Rows', value: '734', note: 'Structured' },
+      { label: 'Low Confidence', value: '52', note: 'Need review' },
+      { label: 'Ready Exports', value: '11', note: 'Reviewer approved' },
+    ],
+  },
+  {
     slug: 'documents',
     title: 'Documents',
     href: '/documents',
@@ -383,6 +439,7 @@ export const featureFamilies = [
   { name: 'Safety', features: ['Adverse Events', 'Drug Safety'] },
   { name: 'Regulatory', features: ['Regulatory', 'Compliance'] },
   { name: 'Data & Analytics', features: ['Data Management', 'Biostatistics', 'Medical Writing'] },
+  { name: 'Literature Intelligence', features: ['Literature Review', 'Citation Tracker', 'Paper Summaries', 'Evidence Tables'] },
   { name: 'Intelligence Layer', features: ['AI Assistant', 'AI Tools'] },
   { name: 'Core Platform', features: ['Documents', 'Notifications', 'Integrations', 'Profiles'] },
 ];
@@ -412,7 +469,11 @@ export const featureContexts: Record<string, FeatureContext> = Object.fromEntrie
     feature.title,
     {
       sourceOwners: [
-        feature.category === 'Safety' ? 'AIDrugInteractionChecker and AIPharmaTrialDesigner' : 'Clinical trial source apps',
+        feature.category === 'Safety'
+          ? 'AIDrugInteractionChecker and AIPharmaTrialDesigner'
+          : feature.category === 'Literature Intelligence'
+            ? 'AIResearchLiteratureAgent'
+            : 'Clinical trial source apps',
         feature.category === 'Intelligence Layer' ? 'AIClinicalTrialMatching and AIResearchLiteratureAgent' : 'Life-sciences operations apps',
       ],
       operatingQueues: [`${feature.title} records`, `${feature.title} approvals`, `${feature.title} exceptions`],
